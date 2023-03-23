@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhieudo = function (nhietdoc) {
+        this.doc = nhietdoc
+
+
+        this.setdoc = function (nhietdoc) {
+            this.doc = nhietdoc
+
+        }
+        this.getdoc = function () {
+            return this.doc
+        }
+        this.chuyendoif = function () {
+            return this.doc * 1.8 + 32
+
+        }
+        this.chuyendoikeven = function () {
+            return this.doc + 273.15
+
+        }
+
+    }
+    let nhiet_do = new nhieudo()
+    let set_do = nhiet_do.setdoc(+prompt('nhập vao độ c để chuyển đổi'))
+    let get_do = nhiet_do.getdoc()
+    let chuyen_do_f = nhiet_do.chuyendoif()
+    let chuyen_do_k = nhiet_do.chuyendoikeven()
+
+    document.write('nhiệt đọ f là ' + chuyen_do_f + '<br>'+'nhiệt độ k là ' + chuyen_do_k)
+
+
+
+
+    class chuyendoi{
+        constructor(nhietdoc1) {
+            this.doc = nhietdoc1
+        }
+        getdoc (){
+            return this.doc
+        }
+        chuyendof (){
+            return this.doc * 1.8 + 32
+        }
+        chuyendok (){
+            return this.doc + 273.15
+        }
+    }
+    let chuyendoi1 = new chuyendoi(+prompt('nhập độ c'))
+    let get_doc1 = chuyendoi1.getdoc()
+    let chuyendof1 = chuyendoi1.chuyendof()
+    let chuyendok1 = chuyendoi1.chuyendok()
+
+    document.writeln('nhiệt độ f là : '+ chuyendof1 +'<br>'+' nhiệt độ k là : '+ chuyendok1 )
+</script>
+
+</body>
+</html>

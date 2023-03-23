@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<button onclick='create()'>Thêm Khách Hàng</button>
+
+<p id="hienthibang"></p>
+
+</body>
+<script>
+    class Qlbanhang {
+        constructor(ten, diachi, hang, soluong) {
+            this.ten = ten
+            this.diachi = diachi
+            this.hang = hang
+            this.soluong = soluong
+        }
+
+        setten(ten) {
+            this.ten = ten
+        }
+
+        setdiachi(diachi) {
+            this.diachi = diachi
+        }
+
+        sethang(hang) {
+            this.hang = hang
+        }
+
+        setsoluong(soluong) {
+            this.soluong = soluong
+        }
+
+        getten2() {
+            return this.ten
+        }
+
+        getdiachi() {
+            return this.diachi
+        }
+
+        gethang() {
+            return this.hang
+        }
+
+        getsoluong() {
+            return this.soluong
+        }
+    }
+    let a = new Qlbanhang()
+    let setten = a.setten('Phạm Nguyễn Trường Tín')
+    let setdiachi = a.setdiachi('Tam Quang ,Núi Thành')
+    let setloaihang = a.sethang('Mực khô loại 1')
+    let setsoluong = a.setsoluong(10)
+
+    let ar = [a]
+    function create() {
+
+        let newname = prompt('nhập tên')
+        let newage = prompt('nhập tuổi')
+        let newbenh = prompt('nhập bệnh')
+        let newque = prompt('nhập quê quán')
+        let newbenhnhan = new Qlbanhang(newname, newage, newbenh, newque)
+        ar.push(newbenhnhan)
+        display(ar);
+    }
+
+    function display() {
+        let str = '<table  style="position: absolute; left: 50%; transform: translate(-50% ,0%)" border="10px">\n' +
+            '    <tr>\n' +
+            '        <th style="background-color: lightslategrey">Tên</th>\n' +
+            '        <th style="background-color: lightslategrey">Tuổi</th>\n' +
+            '        <th style="background-color: lightslategrey">Mục Tiêu</th>\n' +
+            '        <th style="background-color: lightslategrey">Quê quán</th>\n' +
+            '        \n' +
+            '<th style="background-color: lightslategrey">Tùy Chỉnh</th>'
+        '    </tr>\n'
+        for (let i = 0; i < arry.length; i++) {
+            str += '<tr>' +
+                '<td style="background-color: lightgrey">' + arry[i].getten() + '</td>' +
+                '<td style="background-color: lightgrey">' + arry[i].getdiachi() + '</td>' +
+                '<td style="background-color: lightgrey">' + arry[i].gethang() + '</td>' +
+                '<td style="background-color: lightgrey">' + arry[i].getsoluong() + '</td>' +
+                '<td>' +
+                '<button   style="background-color: #5f6062 "  onclick="remove(' + i + ') ">Xóa</button>' +
+                '<button  style="background-color: lightgrey" onclick="edit(' + i + ')">Sửa</button>' +
+                '<button style="background: lightslategrey"  onclick="create()">Thêm MỤc Tiêu </button>' +
+                '</td>' +
+                '</tr>'
+        }
+        str += '</table>';
+        document.getElementById('resuit').innerHTML = str;
+
+    }
+    display()
+
+
+
+
+</script>
+</html>

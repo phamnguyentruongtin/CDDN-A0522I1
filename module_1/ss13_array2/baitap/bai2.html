@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span style="color:red ;">Từ</span>
+<span style="color: deeppink;"> Điển</span>
+<span style="color: palevioletred;"> Màu</span>
+<span style="color:green ;"> Mè</span> <br>
+<input style="height: 30px; color: blueviolet ; background-color: chartreuse" type="text" placeholder="Nhập từ cần tìm kiếm" id="1">
+<button style="height: 30px; background-color: orange"  onclick="timkiem()">Tìm Kiếm</button>
+<h4 style="color: blue" id="ketQua"></h4>
+<script>
+    let tiengViet = ["khỉ", "Chó", "mèo", "hổ", "sư tử", "voi", "rắn", "trâu"]
+    let tiengAnh= ["monkey", "dog", "cat", "tiger", "lion", "elephant", "snake", "buffalo"]
+    function timkiem() {
+        let a = document.getElementById('1')
+        let b = tiengAnh.indexOf(a).value
+        let c = tiengViet.indexOf(a).value
+        if(b!=-1){
+            document.getElementById("ketQua").innerText ="Dịch ra là: " + tiengViet[b]
+        }else if(c!=-1) {
+            document.getElementById("ketQua").innerText ="Translates as: "+ tiengAnh[c]
+        } else {
+            alert("Dịch không ra")
+        }
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order chè Bà Đoan</title>
+
+</head>
+<h1 style="text-align: center">Chè Bà Đoan</h1>
+<body style="background: rgb(245, 238, 229);">
+<button style="color: #006341; background-color: bisque;width: 200px;" onclick="chethapcam()">Chè Thập Cẩm</button>
+<button style="color: #006341; background-color: bisque;width: 200px;" onclick="banhmi()">Bánh mì</button>
+<button style="color: #006341; background-color: bisque;width: 100px;" onclick="Thanhtoan()">Order</button>
+<p style="color: #006341" id='1'></p>
+<p style="color: #006341" id='2'></p>
+<p style="color: #006341" id='3'></p>
+<p style="color: #006341" id='4'></p>
+
+
+<script>
+    function chethapcam() {
+        document.getElementById('1').innerHTML =
+            ' 1 Chè Thập Cẩm Đậu - 8K ' + '<br>' +
+            ' 2 Chè đậu Xanh - 7K' + '<br>' +
+            ' 3 Chè khoai môn - 9k' + '<br>' +
+            ' 4 Chè đậu ván - 5K' + '<br>' +
+            ' 5 chè đậu mix cốt dừa - 12k' + '<br>'+
+            ' 6 Chè Thái Mít Đậu xanh - 20k' + '<br>' +
+            ' 7 Chè Thái sầu - 25k' + '<br>' +
+            ' 8 Bánh caramel - 15k' + '<br>' +
+            ' 9 Tàu hủ cốt dừa - 17k' + '<br>' +
+            ' 10 Tàu hủ phô mai - 20k' + '<br>'
+
+
+    }
+
+    function banhmi() {
+        document.getElementById('2').innerHTML =
+            ' 1 Bánh Mì Bơ Gà - 12k' + '<br>' +
+            ' 2 Bánh Mì Thịt Chả - 15k' + '<br>' +
+            ' 3 Bánh Mì Ốp La - 10k' + '<br>' +
+            ' 4 Bánh Mì Xá Xíu - 20k' + '<br>'
+
+    }
+
+    function Thanhtoan() {
+        let tongtien = 0
+        while (true) {
+
+            let fav = +prompt('Nhập mốn Bạn Order Bằng Cách Nhập từ 1 Đến 14 và bấm phím 0 để thanh toán')
+
+            switch (fav) {
+                case 1 :
+                    alert(' Chè Thập Cẩm Đậu - 8K');
+                    tongtien += 8;
+                    break;
+                case 2 :
+                    alert(' Chè đậu Xanh - 7K');
+                    tongtien += 7;
+                    break;
+                case 3 :
+                    alert(' chè khoai môn - 9k');
+                    tongtien += 9;
+                    break;
+                case 4 :
+                    alert(' chè đạu váng - 5k');
+                    tongtien += 5;
+                    break;
+                case 5 :
+                    alert(' chè đậu mix cốt dừa - 12k');
+                    tongtien += 12
+                    break;
+                case 6 :
+                    alert(' Chè Thái Mít Đậu xanh - 20k');
+                    tongtien += 20
+                    break;
+                case 7 :
+                    alert(' Chè Thái sầu - 25k');
+                    tongtien += 25
+                    break;
+                case 8 :
+                    alert(' Bánh caramel - 15k');
+                    tongtien += 15
+                    break;
+                case 9 :
+                    alert(' Tàu hủ cốt dừa - 17k');
+                    tongtien += 17
+                    break;
+                case 10 :
+                    alert(' Tàu hủ phô mai - 20k');
+                    tongtien += 20
+                    break;
+                case 11 :
+                    alert(' Bánh Mì Bơ Gà - 12k');
+                    tongtien += 12
+                    break;
+                case 12 :
+                    alert(' Bánh Mì Thịt Chả - 15k');
+                    tongtien += 15
+                    break;
+                case 13 :
+                    alert(' Bánh Mì Ốp La - 10k');
+                    tongtien += 10
+                    break;
+                case 14 :
+                    alert('  Bánh Mì Xá Xíu - 20k')
+                    tongtien += 20
+                    break;
+
+                default :
+                    break;
+
+            }
+            if (fav === 0) {
+                alert('cảm ơn quý khách')
+                document.getElementById('4').innerHTML = 'hóa đơn của bạn là ' + tongGia + '.000VND'
+                break;
+            }
+            if(fav<0||fav>16){
+                alert('Không Có Món Bạn Muốn Order')
+            }else {
+                let b = parseInt(prompt('Nhập Số Lượng muốn mua : '))
+                let tongGia = b * tongtien
+                document.getElementById('4').innerHTML = 'hóa đơn của bạn là ' + tongGia + '.000VND'
+            }
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

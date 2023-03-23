@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh Sách Nhà xe</title>
+</head>
+<body>
+<style>
+
+</style>
+<h2 style="text-align: center">Danh Sách Sach</h2>
+<p id='resuit'></p>
+</body>
+<script>
+    class QuanLiNhaSach {
+        constructor(MaSoSach, TenSach, NamXuatBan, SoQuyen, ) {
+            this.MaSoSach = MaSoSach;
+            this.TenSach = TenSach;
+            this.NamXuatBan = NamXuatBan;
+            this.SoQuyen = SoQuyen;
+            this.TinhTrang = true
+        }
+
+        setMaSoSach(MaSoSach) {
+            this.MaSoSach = MaSoSach;
+        }
+
+        setTenSach(TenSach) {
+            this.TenSach = TenSach;
+        }
+
+        setNamXuatban(NamXuatBan) {
+            this.NamXuatBan = NamXuatBan;
+        }
+
+        setSoQuyen(SoQuyen) {
+            this.SoQuyen = SoQuyen;
+        }
+
+
+        getMaSoSach() {
+            return this.MaSoSach;
+        }
+
+        getTenSach() {
+            return this.TenSach;
+        }
+
+        getNamXuatBan() {
+            return this.NamXuatBan;
+        }
+
+        getSoQuyen() {
+            return this.SoQuyen;
+        }
+
+        getTinhTrang() {
+            return this.TinhTrang
+        }
+
+
+    }
+
+    let newSach = new QuanLiNhaSach();
+    let setMASach = newSach.setMaSoSach('12345');
+    let settenSach = newSach.setTenSach('Toan');
+    let setNamXuatBan = newSach.setNamXuatban('2003');
+    let setSoQuyen = newSach.setSoQuyen('3');
+    let GetTinhTrang = newSach.getTinhTrang();
+
+
+    let arry = [newSach];
+    display(arry)
+
+    function display() {
+        let str = '<table  style="position: absolute; left: 50%; transform: translate(-50% ,0%)" border="10px">\n' +
+            '    <tr>\n' +
+            '        <th style="background-color: lightslategrey">Ma So Sach</th>\n' +
+            '        <th style="background-color: lightslategrey">Ten Sach</th>\n' +
+            '        <th style="background-color: lightslategrey">Nam Xuat ban</th>\n' +
+            '        <th style="background-color: lightslategrey">So Quyen</th>\n' +
+            '        <th style="background-color: lightslategrey">Tinh Trang</th>\n' +
+            '        \n' +
+            '<th style="background-color: lightslategrey">Tùy Chỉnh</th>'
+        '    </tr>\n'
+        for (let i = 0; i < arry.length; i++) {
+            str += '<tr>' +
+                '<td style="background-color: lightgrey">' + arry[i].getMaSoSach() + '</td>' +
+                '<td style="background-color: lightgrey">' + arry[i].getTenSach() + '</td>' +
+                '<td style="background-color: lightgrey">' + arry[i].getNamXuatBan() + '</td>' +
+                '<td style="background-color: lightgrey">' + arry[i].getSoQuyen() + '</td>' +
+                '<td style="background-color: lightgrey">' + arry[i].getTinhTrang() + '</td>' +
+                '<td>' +
+                '<button   style="background-color: #5f6062 "  onclick="remove(' + i + ') ">Xóa</button>' +
+                '<button  style="background-color: lightgrey" onclick="edit(' + i + ')">Sửa</button>' +
+                '<button style="background: lightslategrey"  onclick="create()">Thêm Sach </button>' +
+                '</td>' +
+                '</tr>'
+        }
+        str += '</table>';
+        document.getElementById('resuit').innerHTML = str;
+
+    }
+
+    function remove(value) {
+        let xoa = confirm('bạn cso muốn xóa không');
+        if (xoa){
+            arry.splice(value, 1);
+            alert('đã xóa thành công');
+        }
+        display(arry);
+    }
+
+    function create() {
+        let newMaSoSaCh = prompt('nhập Ma So Sach');
+        let newTenSach = prompt('nhập  tên sach' );
+        let newNamXuatBan = prompt('nhập Nam Xuat Ban');
+        let newSoQuyen = prompt('nhập So Quyen');
+        let newTinhTrang = true
+        let newSach = new QuanLiNhaSach(newMaSoSaCh,newTenSach,newNamXuatBan,newSoQuyen,newTinhTrang);
+        arry.push(newSach);
+        display(arry);
+
+    }
+
+    function edit(value) {
+        let newMaSoSaCh = prompt('nhập Ma So Sach');
+        let newTenSach = prompt('nhập  tên sach');
+        let newNamXuatBan = prompt('nhập Nam Xuat Ban');
+        let newSoQuyen = prompt('nhập So Quyen');
+        let newTinhTrang = true
+        let newsinhvien = new QuanLiNhaSach(newMaSoSaCh,newTenSach,newNamXuatBan,newSoQuyen,newTinhTrang);
+        arry[value] = newsinhvien;
+        display(arry);
+    }
+
+    display();
+</script>
+</html>

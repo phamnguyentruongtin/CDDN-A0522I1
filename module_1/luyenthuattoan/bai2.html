@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let loop = +prompt('input num you want to push to array')
+    let array = []
+    let ar = []
+
+    for (let i = 0; i < loop; i++) {
+        let num = +prompt('push the num' + i + ':')
+        array.push(num)
+    }
+    for (let j = 0; j < array.length; j++) {
+        let dem = 0
+        for (let k = 0; k < array.length; k++) {
+            if (array[j] - array[k] === 0) {
+                dem++
+                document.writeln("<br>");
+                document.writeln(array[j] + ":" + dem);
+            }
+        }
+        if (ar.indexOf(array[j]) === -1) {
+            document.writeln("<br>");
+            document.writeln(array[j] + ":" + dem);
+            ar.push(array[j]);
+        }
+
+    }
+
+
+</script>
+</html>

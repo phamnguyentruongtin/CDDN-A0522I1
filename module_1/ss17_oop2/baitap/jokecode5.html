@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class KiemTraSoThanThiet {
+        constructor(num1, num2) {
+            this.num1 = num1
+            this.num2 = num2
+            this.uoc1 = 0
+            this.uoc2 = 0
+        }
+
+        Setnum1(num1) {
+            this.num1 = num1
+        }
+
+        Setnum2(num2) {
+            this.num2 = num2
+        }
+
+        Getnum1() {
+            return this.num1
+        }
+
+        Getnum2() {
+            return this.num2
+        }
+
+        static loop1() {
+            for (let i = 0; i < this.num1; i++) {
+                if (this.num1 % i === 0) {
+                    this.uoc1 += i
+                }
+            }
+        }
+
+        static loop2() {
+            for (let j = 0; j < this.num2; j++) {
+                if (this.num2 % j === 0) {
+                    this.uoc2 += j
+                }
+
+            }
+        }
+
+        static check() {
+            if (this.uoc1 === this.num2 && this.num1 === this.uoc2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+
+    let num1 = new KiemTraSoThanThiet()
+    let setnum1 = num1.Setnum1(+prompt('input num1'))
+    let setnum2 = num1.Setnum2(+prompt('input num2'))
+    num1.loop1()
+    num1.loop2()
+    num1.check()
+    if (true) {
+        document.writeln('hai so than thiet')
+    } else {
+        document.writeln('khong phai hai so than thiet')
+    }
+
+</script>
+
+</body>
+</html>

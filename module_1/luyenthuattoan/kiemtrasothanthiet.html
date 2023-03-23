@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemtra() {
+        let uoc1 = 0
+        let uoc2 = 0
+
+        for (let i = 0; i <= num1 / 2; i++) {
+            if (num1 % i == 0) {
+                uoc1 += i
+            }
+        }
+
+        for (let j = 0; j <= num2 / 2; j++) {
+            if (num2 % j == 0) {
+                uoc2 += j
+            }
+        }
+
+        if (uoc1 === num2 && uoc2 === num1) {
+            document.writeln('hai số bạn vừa nhập là hai số thân thiết ')
+        } else {
+            document.writeln('hai số bạn vừa nhập không phải số thân thiết ')
+        }
+    }
+
+    let num1 = +prompt('nhập số thứ nhất')
+    let num2 = +prompt('nhập số thứ hai')
+    kiemtra(num1, num2)
+
+
+</Script>
+</body>
+</html>

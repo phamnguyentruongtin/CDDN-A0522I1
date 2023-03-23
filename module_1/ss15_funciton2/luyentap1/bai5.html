@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>NHỮNG NGÔI SAO CÓ THỂ NHẬP</h3>
+<P>Polaris,Aldebaran,Deneb,Vega,Altair,Dubhe,Regulus</P>
+<input id ='1' type="text">
+<button onclick="kiemtra()">check</button>
+<p id = 'KetQua'></p>
+<script>
+    let ngoisao=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' ,'Regulus']
+    let chomsao=[ 'UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor' , 'Leo']
+    function kiemtra() {
+        let c = document.getElementById('1').value
+        let i = ngoisao.indexOf(c)
+        if (i != -1) {
+            document.getElementById('KetQua').innerHTML= chomsao[i]
+        }else{
+            document.write('vui long nhap dung sao')
+        }
+    }
+</script>
+</body>
+</html>

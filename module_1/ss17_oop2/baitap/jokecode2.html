@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class olympic {
+        constructor(name, age, monthidau, weight, height) {
+            this.name = name;
+            this.age = age;
+            this.monthidau = monthidau;
+            this.weight = weight;
+            this.height = height;
+        }
+
+        getname() {
+            return this.name;
+        }
+
+        getage() {
+            return this.age;
+        }
+
+        getmonthidau() {
+            return this.monthidau;
+        }
+
+        getweight() {
+            return this.weight;
+        }
+
+        getheight() {
+            return this.height;
+        }
+
+    }
+
+
+    let vandongvien1 = new olympic('ronaldo',37,'soccer',70,178);
+    let getname1 = vandongvien1.getname();
+    let getage2 = vandongvien1.getage();
+    let getmonthidau1 = vandongvien1.getmonthidau();
+    let getcannang = vandongvien1.getweight();
+    let getcheucao = vandongvien1.getheight();
+
+    document.writeln(getname1+'<br>'+getage2+'<br>'+getmonthidau1+'<br>'+getcannang+'<br>'+getcheucao)
+
+</script>
+
+</body>
+</html>

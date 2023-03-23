@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        var soVongLap = +prompt('nhaạp số kí tự phần tử bạn mong muốn');
+
+    } while (soVongLap <= 0 || soVongLap >= 50 )
+
+    let viTriChan = 0;
+    let soLe = 0;
+    let Arr = [];
+
+    for (let i = 1; i <= soVongLap; i++) {
+        let PhanTu = +prompt('nhập vào phần tử thứ ' + i)
+        Arr.push(PhanTu);
+    }
+    for (let j = 0; j < Arr.length; j++) {
+        if (Arr[j] % 2 !== 0 && j % 2 === 0) {
+            soLe += Arr[j]
+            viTriChan++
+        }
+    }
+    document.writeln('mảng trước khi nhập' + Arr + '<br>')
+    document.writeln('trung bình các số chẳn ở vị trí số lẻ là ' + soLe / viTriChan)
+</script>
+
+</body>
+</html>

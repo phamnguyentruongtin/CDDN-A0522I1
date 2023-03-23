@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    class rat {
+        constructor(name, weight, pass, status) {
+            this.name = name;
+            this.weight = weight;
+            this.pacc = pacc;
+            this.status = status;
+        }
+
+        getname() {
+            return this.name
+        }
+
+        gettocdo() {
+            return this.pacc
+        }
+
+        sound() {
+            document.writeln('chit chit');
+        }
+
+        status1() {
+            if (this.status === 'die') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getweight() {
+            return this.weight = 0;
+        }
+    }
+
+    class cat {
+        constructor(name, weight, fullpa,) {
+            this.name = name;
+            this.weight = weight;
+            this.fullpass = fullpacc;
+
+        }
+
+        getfullpass() {
+            return this.fullpacc
+        }
+
+        getnaem() {
+            return this.name
+        }
+
+        sound() {
+            document.writeln('meo meo');
+        }
+
+        catch(rat) {
+            if (this.fullpa > rat.pacc) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        eat(rat) {
+            if (rat.status1(!true)) {
+                this.weight += rat.weight;
+            }
+        }
+
+        getweight() {
+            return this.weight
+        }
+    }
+
+cc
+
+    let chuot = new rat('jerry', 100, 2, 'alive')
+    let ten1 = chuot.getname()
+    let tocdoc = chuot.gettocdo()
+    let amthanh1 = chuot.sound()
+    let trangthai = chuot.status1()
+    let cannnagchuot = chuot.getweight()
+
+    let meo = new cat('tom', 15, 120,)
+    let ten2 = meo.getnaem()
+    let tocdo1 = meo.getfullpass()
+    let amthanhmeo = meo.sound()
+    let bat = meo.catch()
+    let an = meo.eat()
+    let cannang = meo.getweight()
+
+    document.writeln(ten1 + tocdoc + amthanh1 + trangthai + cannnagchuot)
+    document.writeln(ten2 + tocdo1 + amthanhmeo + cannang +bat+an)
+    console.log(rat,cat)
+</script>
+
+</body>
+</html>

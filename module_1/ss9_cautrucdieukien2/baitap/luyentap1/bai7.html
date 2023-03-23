@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let phicodinh = 25000
+    let thoigiangoi = parseFloat(prompt('nhap so phut da goi'))
+    let phicuocgoi
+
+    if(thoigiangoi<50){
+        phicuocgoi=phicodinh+(thoigiangoi*600)
+      alert(phicuocgoi)
+    }
+    else if(thoigiangoi>150){
+        phicuocgoi=phicodinh+(thoigiangoi*400)
+        alert(phicuocgoi)
+    }
+    else
+    {
+        phicuocgoi=phicodinh+(thoigiangoi*200)
+        alert(phicuocgoi)
+    }
+</script>
+
+</body>
+</html>

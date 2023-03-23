@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    let num = prompt('nhap mot so')
+    let n1 = 0
+    let n2 = 1
+    let fibonaci
+
+    for(let i = 0;i<num;i++){
+        fibonaci = n1 + n2
+        n1 = n2
+        n2 = fibonaci
+    }if(fibonaci%5===0){
+        alert(fibonaci)
+    }else{
+        alert('khong co so nao chia het cho 5')
+    }
+</script>
+</html>

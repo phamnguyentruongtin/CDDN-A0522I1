@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thunhap = parseFloat(prompt('nhap thu nhap ca nhan'))
+    if (thunhap < 4000000){
+       let thuethunhap = (thunhap * 100)/100
+        alert('thue thu nhap cua ban 0%')
+        alert(thuethunhap)
+    }else if(thunhap>4000000 && thunhap<10000000){
+        let thuethunhap = (thunhap / 300) * 100
+        console.log(thunhap)
+        alert('thue thu nhap cua ban 30%')
+        alert(thuethunhap)
+    }else {
+        let thuethunhap = (thunhap / 400) *100
+        alert('thue thu nhap cua ban 40%')
+        alert(thuethunhap)
+    }
+</script>
+
+</body>
+</html>

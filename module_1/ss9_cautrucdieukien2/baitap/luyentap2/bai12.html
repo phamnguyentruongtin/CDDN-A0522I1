@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienvay = 1000000000
+    let thang = parseInt(prompt('nhap so thang da vay'))
+    let laisuat = (1000000000 / 120) * 100
+    if(thang<12){
+        laisuat = laisuat/12
+        alert(laisuat)
+    }else if (thang > 12 && thang < 24){
+        laisuat = (laisuat / thang) + 1
+        alert(laisuat)
+    }else{
+        laisuat = (laisuat / thang ) + 2
+    }
+
+</script>
+
+</body>
+</html>

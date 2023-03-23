@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = +prompt('nhập số lương : ')
+    document.writeln('lương ròng là : ' + luong+'<br>')
+    if (luong < 5.000000) {
+        let thueluong = (luong / 700) * 100
+        document.writeln('thuế là : '+thueluong)
+
+    } else if(luong>5000000 && luong<15.000000) {
+        let thueluong = (luong / 1200) * 100
+        document.writeln('thuế là :' + thueluong)
+    }else {
+        let thueluong = (luong / 1500) * 100
+        document.writeln('thuế là :' + thueluong)
+    }
+
+
+</script>
+
+</body>
+</html>

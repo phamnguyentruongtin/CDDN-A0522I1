@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapdiembaikiemtra = parseFloat(prompt('nhap diem bai kiem tra'))
+    let diembaikiemtra = nhapdiembaikiemtra
+    console.log(diembaikiemtra)
+    let nhapdiembaigiuaky = parseFloat(prompt('nhap diem bai giua ki'))
+    let diembaigiuaky = nhapdiembaigiuaky
+    console.log(diembaigiuaky)
+    let nhapdiembaicuoiky = parseFloat(prompt('nhap diem bai cuoi ki'))
+    let diembaicuoiky = nhapdiembaicuoiky
+    console.log(diembaicuoiky)
+    let diemtrungbinh = (diembaikiemtra + diembaigiuaky + diembaicuoiky) /3
+    console.log(diemtrungbinh)
+    if (diemtrungbinh < 5){
+        alert('hoc sinh trung binh kem')
+    }
+
+    else if(diemtrungbinh >5 && diemtrungbinh <=8)
+    {
+        alert('hoc sinh tien tien')
+    }
+    else
+    {
+        alert('hoc sinh gioi')
+    }
+
+</script>
+
+</body>
+</html>

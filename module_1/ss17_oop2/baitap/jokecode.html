@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class math {
+        constructor(num1, num2) {
+            this.num1 = num1;
+            this.num2 = num2;
+        }
+
+        getnum1() {
+            return this.num1;
+        }
+
+        getnum2() {
+            return this.num2;
+        }
+
+        tong() {
+            return getso1 + getso2;
+        }
+
+        hieu() {
+            return this.num1 - this.num2;
+
+        }
+
+        tich() {
+            return this.num1 * this.num2;
+        }
+
+        thuong() {
+            return this.num1 / this.num2;
+        }
+
+
+    }
+
+    let so = new math(10,20)
+    let getso1 = so.getnum1();
+    let getso2 = so.getnum2();
+    let tong1 = so.tong();
+    let tich1 = so.tich();
+    let hieu1 = so.hieu();
+    let thuong1 = so.thuong();
+
+    document.writeln('tổng 2 số là ' + tong1);
+    document.writeln('hieu 2 số là ' + hieu1);
+    document.writeln('tích 2 số là ' + tich1);
+    document.writeln('thương 2 số là ' + thuong1);
+
+
+</script>
+
+</body>
+</html>

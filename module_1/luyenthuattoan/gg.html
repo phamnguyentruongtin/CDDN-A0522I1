@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tangdonvi() {
+        let numinput = +prompt('what numbers you want to push the array')
+        let array = []
+        for (let i = 1; i <= numinput; i++) {
+            let x = +prompt('input num ' + i)
+            array.push(x)
+        }
+        document.writeln('mang truoc khi chuyen doi' + array+'<br>')
+
+        let numcheck1 = +prompt('input num')
+
+
+        for (let j = 0; j < array.length; j++) {
+            if (numcheck1 % 2 === 0) {
+                if (array[j] % 2 !== 0) {
+                    array[j]++
+
+                }
+            } else {
+                if (array[j] % 2 === 0)
+                    array[j]++
+            }
+        }
+        for(let k =0;k<array.length;k++){
+            if(array[k]===numcheck1){
+                array.splice(array[k]-1,1,-1)``
+            }
+
+        }
+        document.writeln('ban da nhap so ' +numcheck1+ ' de thay doi phan tu'+'<br>')
+        document.writeln('mang sau khi chuyen doi la :'+array+'<br>')
+    }
+    tangdonvi()
+</script>
+
+</body>
+</html>

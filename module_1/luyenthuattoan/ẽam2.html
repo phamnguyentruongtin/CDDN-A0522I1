@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tryremovex(num) {
+        let mang = [];
+        for (let i = 1; i <= num; i++) {
+            let num1 = +prompt('nhập kí tứ thứ ' + i)
+            mang.push(num1)
+        }
+        for (let j = 0; j <= mang.length; j++) {
+            if (mang[j] === 'x') {
+                mang.splice(mang,1,);
+
+            }
+        }
+        document.writeln("" + mang);
+
+    }
+    
+    let sokitu = +prompt('nhập số kí tự mong muốn ');
+    tryremovex(sokitu);
+</script>
+
+</body>
+</html>

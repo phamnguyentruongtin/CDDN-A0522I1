@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên tố</title>
+
+
+</head>
+
+
+<body>
+</body>
+
+<script>
+    class Snt {   constructor(num1) {
+            this.num1 = num1;
+            this.dem = 0
+        }
+
+
+        setnum1(num1) {
+            this.num1 = num1;
+        }
+
+        getnum1() {
+            return this.num1;
+        }
+
+        check1() {
+            if (this.num1 < 2) {
+                return false;
+            } else if (this.num1 > 2) {
+                for (let i = 2; i <= Math.sqrt(this.num1); i++) {
+                    if (this.num1 % i === 0) {
+                        this.dem++;
+                    }
+                }
+                if (this.dem === 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return true;
+            }
+        }
+
+
+    }
+
+    let num1 = new Snt();
+    let setnum1 = num1.setnum1(+prompt('nhập vào một số'));
+    num1.check1();
+    if (num1.check1()) {
+        document.writeln('là số nguyên tố');
+    } else {
+        document.writeln('không phải lầ số nguyên tố');
+    }
+
+
+</script>
+</html>

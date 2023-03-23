@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="a" type="text">
+<input id="b" type="text">
+<button onclick="phuongtrinhbac1();">kiem tra phuong trinh</button>
+<p id="ketquaphuongtrinh"></p>
+
+
+<script>
+
+    function phuongtrinhbac1() {
+        let a = parseFloat(document.getElementById("a").value)
+        let b = parseFloat(document.getElementById('b').value)
+
+        if(a == 0){
+            if( b == 0) {
+                document.getElementById('ketquaphuongtrinh').innerHTML = "phuong trinh vo so nghiem"
+            }else {
+                document.getElementById('ketquaphuongtrinh').innerHTML = "phuong trinh vo  nghiem"
+                }
+        }else{
+            let x = -b/a
+            document.getElementById('ketquaphuongtrinh').innerHTML ="phuong trinh ax + b = 0 co nghiem x =" + x
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt('nhap vao 1 so')
+    let n1 = 0
+    let n2 = 1
+    let fibonaci
+    for(let i = 0;i<=num;i++){
+        fibonaci=n1+n2
+        n1 = n2
+        n2 = fibonaci
+        document.writeln(fibonaci)
+    }
+</script>
+</body>
+</html>

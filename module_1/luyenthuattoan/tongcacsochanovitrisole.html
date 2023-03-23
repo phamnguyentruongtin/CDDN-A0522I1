@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tong = 0
+    let chia = 0
+    let num = []
+    let cacsomuonvaomang = +prompt('nhập só lần muốn lặp')
+    let tbc
+    for (let i = 0; i < cacsomuonvaomang; i++) {
+        let num2 = +prompt('nhập số')
+        num.push(num2)
+    }
+    for (let j = 0; j <= num.length; j++) {
+        if (num[j] % 2 === 0 && j % 2 !== 0) {
+            tong += num[j]
+            chia++
+        }
+    }
+    tbc = tong / chia
+   document.writeln('mảng trước khi nhập' + num +'<br>')
+   document.writeln('trung binh cọng các só chản ở vị trí số lẻ là' + tbc)
+</script>
+
+</body>
+</html>

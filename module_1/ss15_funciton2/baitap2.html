@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>METER</h2>
+<input type='text' id="1"  >
+<button onclick="chuyendoi()"  >chuyen doi</button>
+<H2>FEET</H2>
+<input type='text' id="2"  >
+<button onclick="chuyendoi2()">chuyen doi</button>
+<p id="3"></p>
+<script>
+    function chuyendoi() {
+        let met = document.getElementById('1').value
+        let foot = 3.279 * met
+        document.getElementById('3').innerHTML = foot
+    } function chuyendoi2() {
+        let foot = document.getElementById('2').value
+        let met =  0.305 * foot
+        document.getElementById('3').innerHTML = met
+    }
+
+</script>
+
+</body>
+</html>

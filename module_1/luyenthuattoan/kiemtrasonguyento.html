@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemtrasonguyento() {
+        let num = +prompt('nhap vao so')
+        let dem = 0
+        if (num < 2) {
+            document.write(num + ' 9khong phai so nguyen to ')
+        } else if (num > 2) {
+            for (let i = 0; i <= num; i++) {
+                if (num % i === 0) {
+                    dem++
+                }
+            }
+
+            if (dem === 2) {
+                document.write(num + ' la so nguyen to')
+            } else {
+                document.write(num + ' khong phai la so nguyen to')
+
+            }
+
+        } else {
+            document.write(num + ' la so nguyen to')
+        }
+
+    }
+
+    kiemtrasonguyento()
+
+</script>
+
+</body>
+</html>

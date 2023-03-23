@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findmax(dodaimang) {
+        let max = 0;
+        let mang = [];
+        for (let i = 1; i <= dodaimang; i++) {
+            let numput = +prompt('nhập phần tử thứ' + i)
+            mang.push(numput);
+        }
+        for (let j = 0; j <= mang.length; j++) {
+            if (mang[j] > max) {
+                max = mang[j];
+            }
+        }
+        document.writeln(max +" là số lớn nhất trong mảng");
+    }
+
+    let dodaimang = +prompt('nhập độ dài mảng ');
+    findmax(dodaimang);
+
+</script>
+
+</body>
+</html>

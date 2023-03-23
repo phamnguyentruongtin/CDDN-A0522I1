@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function snt() {
+        let count = 0
+        while (count <= num) {
+
+            let dem = 0
+            if (num < 2) {
+                return true
+            } else {
+                for (let j = 1; j <= num; j++) {
+                    if (num % j === 0) {
+                        dem++
+                        if (dem === 2) {
+                            return false
+                        }
+                    } else {
+                        return true
+
+                    }
+                }
+
+            }for (let i=0;i<=j;i++) {
+                if (snt(i) === true) {
+                    document.write(' ' + i)
+                }
+
+            }
+
+        }
+        count++
+
+    }
+
+
+    let num = +prompt('input num')
+    snt(num)
+
+
+
+</script>
+
+
+</body>
+</html>

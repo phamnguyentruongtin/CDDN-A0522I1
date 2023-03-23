@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //  let hinhchunhat = function (chieudai,chieucao,) {
+    //     this.dai = chieudai
+    //     this.dai = chieucao
+    //
+    //     this.setdai = function (chieudai) {
+    //         this.dai = chieudai;
+    //     }
+    //     this.setcao = function (chieucao) {
+    //         this.cao = chieucao;
+    //     }
+    //     this.getdai = function () {
+    //         return this.dai;
+    //
+    //     }
+    //     this.getcao = function () {
+    //         return this.cao;
+    //
+    //     }
+    //     this.dientich = function () {
+    //         return this.dai * this.cao;
+    //
+    //     }
+    //     this.chuvi = function () {
+    //         return (this.dai + this.cao) * 2
+    //
+    //     }
+    // }
+    //
+    // let hinhchunhat1 = new hinhchunhat()
+    // let chieudai = hinhchunhat1.setdai(30)
+    // let chieucao = hinhchunhat1.setcao(20)
+    // let getchieudai = hinhchunhat1.getdai()
+    // let getchieucao = hinhchunhat1.getcao()
+    // let dientich = hinhchunhat1.dientich()
+    // let chuvi = hinhchunhat1.chuvi()
+    // document.write('dien tich la '+ dientich +'<br>' + 'chu vi la '+chuvi)
+
+
+    class hinhchunhat {
+        constructor(chieudai, chieucao) {
+            this.chieudai = chieudai
+            this.chieucao = chieucao
+        }
+
+        getchieudai() {
+            return this.chieudai
+        }
+
+        getchieucao() {
+            return this.chieucao
+        }
+
+        dientich() {
+            return this.chieucao * this.chieudai
+        }
+
+        chuvi() {
+            return (this.chieudai + this.chieucao) * 2
+        }
+    }
+    let hinhchunhat1 = new hinhchunhat(10,20)
+    let chieucao = hinhchunhat1.getchieucao()
+    let chieudai = hinhchunhat1.getchieudai()
+    let dientich = hinhchunhat1.dientich()
+    let chuvi = hinhchunhat1.chuvi()
+    document.write('dien tich la '+ dientich +'<br>' + 'chu vi la '+chuvi)
+
+</script>
+
+</body>
+</html>

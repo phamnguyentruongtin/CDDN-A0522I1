@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra Ước</title>
+</head>
+<h1 >Kiểm Tra Ước</h1>
+<input id ='1' type="text">
+<button onclick="uoc1()">Hiển Thị Kết Quả</button>
+<P id="Submit"></P>
+
+<body>
+<script>
+    function uoc1() {
+        let num = document.getElementById('1').value
+        let uoc = 0
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                uoc++
+            }
+        }
+        document.getElementById('Submit').innerHTML = uoc
+    }
+</script>
+</body>
+</html>

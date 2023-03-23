@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>mời nhập tuổi</h2>
+<input id="tuoi" type="text"><br><br>
+<button onclick="kiemtra()">kiểm tra độ tuổi</button>
+<p id="KetQua"></p>
+<script>
+    function kiemtra() {
+        let age = parseInt(document.getElementById('tuoi').value)
+        if (age < 0) {
+            document.getElementById('KetQua').innerHTML = age +" "+ "không phải số tuổi"
+        } else if (age>0 && age<120) {
+            document.getElementById('KetQua').innerHTML = age +" "+ "là số tuổi"
+        } else
+            document.getElementById('KetQua').innerHTML = age +" "+"không phải là số tuổi"
+    }
+</script>
+
+
+</body>
+</html>
