@@ -1,0 +1,13 @@
+<p>caculator works!</p>
+
+<input type="number" #num1>
+<select #action>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+</select>
+<input type="number" #num2>
+<button (click)="caculatorAction(num1.value,num2.value,action.value)">=</button> 
+<P>{{result}}</P>
