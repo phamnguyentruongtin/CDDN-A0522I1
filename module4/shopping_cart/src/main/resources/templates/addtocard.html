@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="dobuy" th:object="${product}">
+  <P>ID Product</P>
+  <input th:field="*{id_product}">
+  <P>Name Of Product</P>
+  <input th:field="*{name_product}">
+  <P>From Of Product</P>
+  <input th:field="*{product_from}">
+  <P>Date</P>
+  <input th:field="*{date}" type="date">
+  <P>Category</P>
+  <input th:field="*{category_of_product}">
+  <p>ID Client</p>
+  <input th:field="*{client.Id_client}">
+  <p>Name Of  Client</p>
+  <input th:field="*{client.name_client}">
+  <P>Gender</P>
+  <input th:field="*{client.gender}">
+  <button type="submit">Add to cart</button>
+</form>
+
+</body>
+</html>

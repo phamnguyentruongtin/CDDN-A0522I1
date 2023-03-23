@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${book}" action="docreatebook" method="post">
+    <p>Book Name</p>
+    <input th:field="*{bookName}">
+    <p style="color: red" th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}"></p>
+    <p>category</p>
+    <input th:field="*{category}">
+    <p style="color: red" th:if="${#fields.hasErrors('category')}" th:errors="*{category}"></p>
+    <p>Price</p>
+    <input th:field="*{priceBook}">
+    <p style="color: red" th:if="${#fields.hasErrors('priceBook')}" th:errors="*{priceBook}"></p>
+    <p>amount of book</p>
+    <input th:field="*{amountOfBook}">
+    <p style="color: red" th:if="${#fields.hasErrors('amountOfBook')}" th:errors="*{amountOfBook}"></p>
+    <button type="submit">submit</button>
+</form>
+<a th:href="@{/}">Back To Menu</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${client}" action="docreateclient" method="post">
+    <p>Client Name</p>
+    <input th:field="*{clientName}">
+    <p style="color: red" th:if="${#fields.hasErrors('clientName')}" th:errors="*{clientName}"></p>
+    <p>date of birth</p>
+    <input th:field="*{dateOfBirth}" type="date">
+    <p style="color: red" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></p>
+    <button type="submit">submit</button>
+</form>
+<a th:href="@{/}">Back To Menu</a>
+</body>
+</html>

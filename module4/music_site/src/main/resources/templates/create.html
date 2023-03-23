@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="docreate" method="post">
+    <table th:object="${music}" border="1px">
+        <tr>Song Name</tr>
+        <tr><input th:field="*{musicName}"></tr>
+        <p  style="color: red" th:if="${#fields.hasErrors('musicName')}" th:errors="*{musicName}"></p>
+        <tr>Musical</tr>
+        <tr><input th:field="*{musical}"></tr>
+        <p  style="color: red" th:if="${#fields.hasErrors('musical')}" th:errors="*{musical}"></p>
+        <tr>Music Type</tr>
+        <tr><input th:field="*{musicType}"></tr>
+        <p style="color: red" th:if="${#fields.hasErrors('musicType')}" th:errors="*{musicType}"></p>
+        <tr>Url Song</tr>
+        <p style="color: red" th:if="${#fields.hasErrors('url')}" th:errors="*{url}"></p>
+        <tr><input th:field="*{url}"></tr>
+    </table>
+    <input type="submit" value="Add New">
+</form>
+
+</body>
+</html>

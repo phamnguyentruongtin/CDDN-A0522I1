@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>ID of Product</th>
+    <th>Name of Product</th>
+    <th>Product From</th>
+    <th>Date</th>
+    <th>Category</th>
+  </tr>
+  <tr th:each="product : ${carts}">
+    <td th:text="${product.id_product}"></td>
+    <td th:text="${product.name_product}"></td>
+    <td th:text="${product.product_from}"></td>
+    <td th:text="${product.date}"></td>
+    <td th:text="${product.category_of_product}"></td>
+  </tr>
+</table>
+
+</body>
+</html>

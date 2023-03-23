@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>All Client List</h1>
+<table border="1px">
+    <tr>
+        <th>Client ID</th>
+        <th>Client Name</th>
+        <th>Date of birth</th>
+        <th>Book of Client</th>
+        <th>optional</th>
+        <th>optional</th>
+    </tr>
+    <tr th:each="page : ${pageOfClient}">
+        <td th:text="${page.clientId}"></td>
+        <td th:text="${page.clientName}"></td>
+        <td th:text="${page.dateOfBirth}"></td>
+        <td><a th:href="@{/bookofclient?idclient=__${page.clientId}__}">click to see</a></td>
+        <td><a th:href="@{/editclient?idclient=__${page.clientId}__}">click to edit</a></td>
+        <td><a th:href="@{/removeclient?idclient=__${page.clientId}__}">click to remove</a></td>
+    </tr>
+</table>
+<a th:if="${pageOfClient.hasPrevious()}" th:text="previous"
+   th:href="@{/clientlist?page=__${pageOfClient.number - 1}__}"></a>
+<span th:text="${pageOfClient.number+1}"></span>/<span th:text="${pageOfClient.totalPages}"></span>
+<a th:if="${pageOfClient.hasNext()}" th:text="next" th:href="@{/clientlist?page=__${pageOfClient.number + 1}__}"></a>
+<a th:href="@{/}">Back To Menu</a>
+</body>
+</html>

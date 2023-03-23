@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<form th:method="post" action="/doedit"  th:object="${product}">
+    <input th:field="*{codeProduct}" type="hidden">
+    <p th:if="${#fields.hasErrors('codeProduct')}" th:errors="*{codeProduct}" style="color: red"></p>
+    <lable>Product Name</lable>
+    <input th:field="*{nameProduct}">
+    <p th:if="${#fields.hasErrors('nameProduct')}" th:errors="*{nameProduct}" style="color: red"></p>
+    <lable>manufacturer</lable>
+    <input th:field="*{manufacturer}">
+    <p th:if="${#fields.hasErrors('manufacturer')}" th:errors="*{manufacturer}" style="color: red"></p>
+    <lable>date</lable>
+    <input th:field="*{date}">
+    <p th:if="${#fields.hasErrors('date')}" th:errors="*{date}" style="color: red"></p>
+    <button type="submit">Cap Nhap</button>
+</form>
+
+</body>
+</html>

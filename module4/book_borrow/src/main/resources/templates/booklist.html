@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>All Book</h1>
+<p th:text="${sms}"></p>
+<table border="1px">
+    <tr>
+        <th>book id</th>
+        <th>book Name</th>
+        <th>category</th>
+        <th>price</th>
+        <th>amount</th>
+        <th>optional</th>
+        <th>optional</th>
+        <th>borrows</th>
+        <th>client borrows</th>
+    </tr>
+    <tr th:each="page : ${pageOfBook}">
+        <td th:text="${page.bookId}"></td>
+        <td th:text="${page.bookName}"></td>
+        <td th:text="${page.category}"></td>
+        <td th:text="${page.priceBook}"></td>
+        <td th:text="${page.amountOfBook}"></td>
+        <td><a th:href="@{/editbook?idbook=__${page.bookId}__}">click to edit</a></td>
+        <td><a th:href="@{/removebook?idbook=__${page.bookId}__}">click to remove</a></td>
+        <td><a th:href="@{/borrowsbook?idbook=__${page.bookId}__}" th:if="${page.client == null}">click to borrows</a></td>
+        <td th:if="${page.client != null}" th:text="${page.client.clientName}" placeholder="ready for borrow" ></td>
+    </tr>
+</table>
+<br></br>
+<a th:if="${pageOfBook.hasPrevious()}" th:text="previous" th:href="@{/booklist?page=__${pageOfBook.number - 1}__}"></a>
+<span th:text="${pageOfBook.number + 1}"></span>/<span th:text="${pageOfBook.totalPages}"></span>
+<a th:if="${pageOfBook.hasNext()}" th:text="next" th:href="@{/booklist?page=__${pageOfBook.number + 1}__}"></a>
+<br></br>
+<a th:href="@{/}">Back To Menu</a>
+
+</body>
+</html>

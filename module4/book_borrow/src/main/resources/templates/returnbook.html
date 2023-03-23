@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Return Book</h1>
+<h3 th:text="${failesms}" style="color: darkred"></h3>
+<form method="post" action="doreturnbook">
+    <table border="1px" th:object="${book}">
+        <input type="hidden" th:field="*{bookId}">
+        <p>Book Name</p>
+        <input  th:field="*{bookName}">
+        <p style="color: red" th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}"></p>
+        <p>Category</p>
+        <input  th:field="*{category}">
+        <p style="color: red" th:if="${#fields.hasErrors('category')}" th:errors="*{category}"></p>
+        <p>Price</p>
+        <input  th:field="*{priceBook}">
+        <p style="color: red" th:if="${#fields.hasErrors('priceBook')}" th:errors="*{priceBook}"></p>
+        <p>Amount</p>
+        <input  th:field="*{amountOfBook}" readonly>
+        <p style="color: red" th:if="${#fields.hasErrors('amountOfBook')}" th:errors="*{amountOfBook}"></p>
+        <input type="hidden" th:field="*{code}">
+    </table>
+        <h3>Enter Code Right Here!!!</h3>
+        <input style="color: red" type="text" name="codeCheck">
+        <button type="submit">Submit</button>
+</form>
+</body>
+</html>

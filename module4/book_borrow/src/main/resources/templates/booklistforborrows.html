@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Book Ready for borrows</h1>
+<table border="1px">
+    <tr>
+        <th>book id</th>
+        <th>book Name</th>
+        <th>category</th>
+        <th>price</th>
+        <th>amount</th>
+        <th>optional</th>
+        <th>optional</th>
+        <th>borrows</th>
+    </tr>
+    <tr th:each="page : ${pageOfBookBorrows}">
+        <td th:text="${page.bookId}"></td>
+        <td th:text="${page.bookName}"></td>
+        <td th:text="${page.category}"></td>
+        <td th:text="${page.priceBook}"></td>
+        <td th:text="${page.amountOfBook}"></td>
+        <td th:href="@{/editbook?idbook=__${page.bookId}__}">click to edit</td>
+        <td th:href="@{/removebook?idbook=__${page.bookId}__}">click to remove</td>
+        <td><a th:href="@{borrowsbook?idbook=__${page.bookId}__}">click to borrows</a></td>
+    </tr>
+</table>
+<a th:if="${pageOfBookBorrows.hasPrevious()}" th:text="previous"
+   th:href="@{/booklistborrow?page=__${pageOfBookBorrows.number - 1}__}"></a>
+<span th:text="${pageOfBookBorrows.number}"></span>/<span th:text="${pageOfBookBorrows.totalPages}"></span>
+<a th:if="${pageOfBookBorrows.hasNext()}" th:text="next"
+   th:href="@{/booklistborrow?page=__${pageOfBookBorrows.number + 1}__}"></a>
+<a th:href="@{/}">Back To Menu</a>
+<p th:text="${sms}"></p>
+</body>
+</html>
