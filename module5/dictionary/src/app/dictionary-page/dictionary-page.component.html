@@ -1,0 +1,14 @@
+<h1 style="text-align: center;">Dictionary</h1>
+<table class="table tb">
+    <thead>
+        <tr>
+            <th>Keyword</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dic of dictionaryPage">
+            <td>{{dic.word}}</td>
+            <td><button [routerLink]="['/detail',dic.word]">Translate</button></td>
+        </tr>
+    </tbody>
+</table>
