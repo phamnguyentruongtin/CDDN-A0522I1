@@ -1,0 +1,13 @@
+<form  [formGroup]="formEdit" (submit)="edit()">
+  <input formControlName="id" type="hidden">
+  <label>Name</label>
+  <input formControlName="name" type="text">
+  <br>
+  <label>Price</label>
+  <input formControlName="price" type="text">
+  <br>
+  <label>Description</label>
+  <input formControlName="description" type="text">
+  <br>
+  <button type="submit">Sửa !!!</button>
+</form>

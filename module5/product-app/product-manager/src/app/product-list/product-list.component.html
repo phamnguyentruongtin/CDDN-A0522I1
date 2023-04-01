@@ -1,0 +1,43 @@
+<table class="table tbn">
+  <thead>
+  <tr>
+  <th>Id</th>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Description</th>
+  <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal"  [attr.data-bs-target]="['#abc'+product.id]" >
+      delete
+    </button>
+    <td><a [routerLink]="['edit:/id',product.id]">edit</a></td>
+    <div class="modal fade" [id]="'abc'+product.id"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Xoa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Ban co muon xoa {{product.name}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">huy</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(product['id'])">Xoa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </tr>
+  </tbody>
+
+</table>
+<a routerLink="/reate">dang ki</a>
+

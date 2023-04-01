@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "côcc",
+      "price": "12312321",
+      "description": "fresh"
+    },
+    {
+      "id": 3,
+      "name": "11111",
+      "price": "11111",
+      "description": "11111"
+    },
+    {
+      "id": 4,
+      "name": null,
+      "price": null,
+      "description": null
+    }
+  ]
+}
