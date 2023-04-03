@@ -15,9 +15,9 @@ export class CreateProductComponent implements OnInit {
   constructor(private service : ProductService,private router :Router) {
     this.createProductForm = new FormGroup({
       id : new FormControl(''),
-      name : new FormControl(),
-      price : new FormControl(),
-      description : new FormControl()
+      name : new FormControl(''),
+      price : new FormControl(''),
+      description : new FormControl('')
     })
   }
 

@@ -28,7 +28,8 @@ export class EditComponent implements OnInit {
     })
   }
   edit(){
-    this.service.Edit(this.formEdit.value)
+    console.log(this.formEdit.value);
+    this.service.Edit(this.formEdit.value).subscribe();
     this.router.navigateByUrl('products')
   }
 

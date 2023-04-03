@@ -23,7 +23,7 @@ export class ProductService {
     return  this._httpClient.get("http://localhost:3000/products/" + id)
  }
  Edit(product : Product):Observable<any>{
-    return this._httpClient.put("http://localhost:3000/products/",product)
+    return this._httpClient.put("http://localhost:3000/products/"+ product.id,product)
  }
 
   // @ts-ignore
