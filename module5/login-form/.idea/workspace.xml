@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ce24c1c-ac5f-4d31-aae2-93f4e7ecd12f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../color_picker/color" beforeDir="false" afterPath="$PROJECT_DIR$/../color_picker/color" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hacking_new/hackingApp" beforeDir="false" afterPath="$PROJECT_DIR$/../hacking_new/hackingApp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../may_tinh/product-project/product-app" beforeDir="false" afterPath="$PROJECT_DIR$/../may_tinh/product-project/product-app" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2NvBF5LYD9q5ySe9qZSc57sF3e2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../rent-app" />
+    <property name="ts.external.directory.path" value="F:\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ce24c1c-ac5f-4d31-aae2-93f4e7ecd12f" name="Default Changelist" comment="" />
+      <created>1680534568472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680534568472</updated>
+      <workItem from="1680534569760" duration="29000" />
+      <workItem from="1680578056748" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1680578068014">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1680578068014" />
+  </component>
+</project>
